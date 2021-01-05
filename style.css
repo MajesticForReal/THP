@@ -1,0 +1,33 @@
+body a
+{
+    text-decoration: none;
+}
+#first
+{
+    display: flex;
+    justify-content: flex-end;
+}
+#second
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#last
+{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+#carbone
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#info
+{
+    display: flex;
+    justify-content: flex-end;
+}
