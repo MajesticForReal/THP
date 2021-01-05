@@ -1,33 +1,93 @@
-body a
-{
-    text-decoration: none;
-}
-#first
+#navigation
 {
     display: flex;
     justify-content: flex-end;
+    padding: 0 5px;
 }
-#second
+
+body a
+{
+    text-decoration: none;
+    font-family: "Trebuchet MS", "Verdana";
+    font-size: 14px;
+}
+
+body
+{
+    font-family: "Trebuchet MS", "Verdana";
+    font-size: 14px;
+
+}
+
+.FondCo
+{
+    background-color: #337AFF;
+    border: 1px;
+    border-radius: 2px;
+    color: white;
+}
+
+#Barre
 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-#last
+.barreGOOGLE
 {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
+    height: 42px;
+    width: 590px;
+    border-radius: 80px;
+    border: 0.5px silver solid;
 }
-#carbone
+
+.Milieu
 {
-    display: flex;
+    display : flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
 }
-#info
+
+.Boutons
 {
     display: flex;
-    justify-content: flex-end;
+    justify-content: row;
+    margin: 30px;
+
+
+}
+
+#Rech
+{
+    font-size: 15px;
+    border: solid silver 0px;
+    width: 150px;
+    height: 40px;
+    background-color: #F7F7F7;
+    border-radius: 4px;
+}
+
+#Chance
+{
+    font-size: 15px;
+    border: solid silver 0px;
+    width: 150px;
+    height: 40px;
+    background-color: #F7F7F7;
+    border-radius: 4px;
+}
+
+footer
+{
+    background-color: #F0F0F0;
+    margin: -8px;
+}
+
+
+span.cadre
+{
+    border: 1px black solid;
+    padding: 5px;
 }
