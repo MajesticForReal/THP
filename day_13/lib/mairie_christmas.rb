@@ -8,12 +8,16 @@ def get_all_urls
 	return links
 end
 
+#Pour recuperer les liens.
+
 def get_names
 	val_d_oise = "http://annuaire-des-mairies.com/val-d-oise.html"
 	page = Nokogiri::HTML(URI.open(val_d_oise))
 	names = page.xpath('//*[@class="lientxt"]').map{|element| element = element.text}
 	return names
 end
+
+#Pour recuperer les noms de village.
 
 def scrape_addresses (links)
 	emails = []
@@ -25,6 +29,8 @@ def scrape_addresses (links)
 	return emails
 end
 
+#Pour recuperer les emails.
+
 def final_array_def (emails,names)
 	final_array = []
 	emails.length.times do |i|
@@ -35,6 +41,8 @@ def final_array_def (emails,names)
 	return final_array
 end
 
+#Pour creer l'array final.
+
 def perform
 	links = get_all_urls
 	names = get_names
@@ -42,5 +50,7 @@ def perform
 	final_array = final_array_def(emails,names)
 	puts final_array
 end
+
+#Pour pouvoir assembler les differentes methodes et afficher l'array final.
 
 perform

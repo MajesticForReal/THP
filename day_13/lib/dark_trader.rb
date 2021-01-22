@@ -8,31 +8,34 @@ def get_name
 	return name
 end
 
+#Recuperation des noms de devise.
+
 def get_value
 	url = "https://coinmarketcap.com/all/views/all/"
 	page = Nokogiri::HTML(URI.open(url))
 	value = page.xpath('//*[@class="cmc-table-row"]//td[5]/div').map{|element| element.text}
-	return value.join.to_i
+	return value
 end
 
-puts "#{get_value}"
-
+#Recuperation de la valeur des devises.
 
 def get_array_final(name,value)
-	final_array = []
-	name.each do |i|
-	hash = {}
-	hash[name[i]] = value[i]
-	final_array << hash
-	end
-	return final_array
+	hash_final = Hash[name.zip(value.map)]
+	return hash_final
 end
 
+#Association des devises et les valeurs.
+
 def dark_trader
-	name = get_name
-	value = get_value
-	final_array = get_array_final(name,value)
-	puts final_array
+	get_name
+	puts "Recuperation des noms de devise ..."
+	get_value
+	puts "Recuperation de la valeur des devises ..."
+	array_final = get_array_final(get_name,get_value)
+	puts "Assemblage des donnees ..."
+	puts array_final
 end
+
+#Fonctionnement des methodes et execution.
 
 dark_trader
